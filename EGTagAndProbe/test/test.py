@@ -11,12 +11,12 @@ from Configuration.StandardSequences.Eras import eras
 #=====================================
 isMC        = False
 isMINIAOD   = True
-maxEvents   = 5000
+maxEvents   = -1
 reportEvery = 100
 outputFile = 'NTuple.root'
 
 if isMC:
-    globaltag = '102X_mcRun2_asymptotic_v3'
+    globaltag = '101X_mcRun2_asymptotic_v5'
     datasetFiles = [
         '/store/mc/RunIIFall18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v12_ext1-v1/60000/70E5316E-7F73-C94E-A6FC-9014BC36BDF0.root',
         '/store/mc/RunIIFall18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v12_ext1-v1/60000/70D11899-0FC2-5F4E-8E31-3586B5619B31.root',
@@ -24,13 +24,14 @@ if isMC:
         '/store/mc/RunIIFall18MiniAOD/DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8/MINIAODSIM/102X_upgrade2018_realistic_v12_ext1-v1/60000/6DD6961E-C425-2B40-85F3-6082BB81D010.root',
         ]
 else:
-    globaltag = '102X_dataRun2_Prompt_v4'
+    globaltag = '101X_dataRun2_Prompt_v9'
     datasetFiles = [
-        '/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/321/879/00000/7E4C974F-7EAE-E811-8701-FA163E735012.root',
-        '/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/321/879/00000/78AF9DC9-78AE-E811-8171-FA163E529D85.root',
-        '/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/321/879/00000/5E57E0BA-7FAE-E811-ABC2-FA163EA393DA.root',
-        '/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/321/834/00000/E21A923C-46AE-E811-ABF0-02163E0153A6.root',
-        '/store/data/Run2018D/EGamma/MINIAOD/PromptReco-v2/000/321/834/00000/3448FF7B-3DAE-E811-BE8F-FA163E3F84E6.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/344/00000/683F559A-5092-E811-8C89-FA163EAB8290.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/340/00000/EA942623-4792-E811-A42A-FA163E2F62B7.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/065/00000/F2D0EE4C-0490-E811-93A3-02163E019EB0.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/065/00000/BA946D62-F38F-E811-BADB-02163E019FCC.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/065/00000/80AE3770-F08F-E811-AFA7-FA163ECFC085.root',
+        '/store/data/Run2018C/EGamma/MINIAOD/PromptReco-v3/000/320/065/00000/3EC4B55E-F68F-E811-8E76-FA163EC0210C.root',
         ]
     
 
@@ -102,8 +103,8 @@ my_id_modules =[
     'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Spring16_HZZ_V1_cff',
     'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V1_cff',
     'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V1_cff',
-    'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
-    'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff',
+    #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_noIso_V2_cff',
+    #'RecoEgamma.ElectronIdentification.Identification.mvaElectronID_Fall17_iso_V2_cff',
     ] 
 
 # Add them to the VID producer
